@@ -1,0 +1,33 @@
+group 'my.test.serenitybdd'
+version '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.36")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+dependencies {
+    compile 'net.serenity-bdd:serenity-cucumber:1.9.15'
+    testCompile 'net.serenity-bdd:serenity-core:1.9.36'
+    testCompile 'net.serenity-bdd:serenity-junit:1.9.36'
+    compile 'net.serenity-bdd:serenity-screenplay:1.9.36'
+    testCompile 'org.slf4j:slf4j-simple:1.7.21'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile('org.assertj:assertj-core:1.7.0')
+}
