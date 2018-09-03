@@ -1,0 +1,3 @@
+[submodule "serenity-cucumber"]
+	path = serenity-cucumber
+	url = https://github.com/PRMiangel/serenity-cucumber.git
